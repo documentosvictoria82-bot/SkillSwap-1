@@ -2,23 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>SkillSwap</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Intercambia Habilidades</title>
+    <link rel="stylesheet" href="skillwap.css">
 </head>
 <body>
-<<<<<<< HEAD
 
-    <header>
-        <h1>SkillSwap</h1>
-        <p>Intercambia habilidades con otras personas</p>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 class="logo">SkillSwap</h2>
+        <ul>
+            <li><a href="#publicar">Publicar</a></li>
+            <li><a href="#explorar">Explorar</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <h1>Intercambia habilidades con personas reales</h1>
+        <p>Enseña lo que sabes. Aprende lo que necesitas.</p>
+        <a href="#publicar" class="hero-btn">Comenzar</a>
     </header>
 
-    <section class="form-section">
-        <h2>Publicar Habilidad</h2>
+    <!-- FORMULARIO -->
+    <section class="form-section" id="publicar">
+        <h2>Publicar una habilidad</h2>
+
         <form id="skillForm">
-            <input type="text" id="title" placeholder="Título" required>
-            
-            <textarea id="description" placeholder="Descripción" required></textarea>
+            <input type="text" id="title" placeholder="Título (Ej: Enseño JavaScript)" required>
+
+            <textarea id="description" placeholder="Describe tu habilidad o lo que estás buscando" required></textarea>
 
             <select id="category" required>
                 <option value="">Selecciona categoría</option>
@@ -26,6 +39,7 @@
                 <option value="Idiomas">Idiomas</option>
                 <option value="Diseño">Diseño</option>
                 <option value="Música">Música</option>
+                <option value="Deportes">Deportes</option>
                 <option value="Otros">Otros</option>
             </select>
 
@@ -39,23 +53,26 @@
         </form>
     </section>
 
-    <section class="skills-section">
-        <h2>Publicaciones</h2>
+    <!-- FILTROS -->
+    <section class="filter-section">
+        <h2>Explorar habilidades</h2>
+        <div class="filters">
+            <button onclick="filterSkills('all')">Todas</button>
+            <button onclick="filterSkills('Ofrezco')">Ofrezco</button>
+            <button onclick="filterSkills('Busco')">Busco</button>
+        </div>
+    </section>
+
+    <!-- LISTA DE HABILIDADES -->
+    <section class="skills-section" id="explorar">
         <div id="skillsList"></div>
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 SkillSwap - Proyecto académico</p>
+    </footer>
+
     <script src="script.js"></script>
-=======
-    <h1>hola</h1>
-    <div>
-        <table>
-            <tr>
-                <th>Nombre de usuario</th>
-                <th>Edad</th>
-                <th>Conocimientos</th>
-            </tr>
-        </table>
-    </div>
->>>>>>> b9e47f5fe153b22983a058a2d6673ca58e4a9513
 </body>
 </html>

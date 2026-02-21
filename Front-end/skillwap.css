@@ -1,4 +1,4 @@
-/* Reset básico */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,39 +8,85 @@
 
 body {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    padding: 20px;
+    color: #333;
 }
 
-/* HEADER */
-header {
-    text-align: center;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.2);
     color: white;
-    margin-bottom: 30px;
 }
 
-header h1 {
+.navbar .logo {
+    font-size: 1.5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+.hero h1 {
     font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
-header p {
-    margin-top: 5px;
-    opacity: 0.9;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    background: white;
+    color: #667eea;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-3px);
 }
 
 /* SECCIONES */
 section {
     background: white;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 1000px;
     border-radius: 12px;
-    margin-bottom: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* TITULOS */
-.form-section h2,
-.skills-section h2 {
-    margin-bottom: 15px;
+section h2 {
+    margin-bottom: 20px;
     color: #444;
 }
 
@@ -48,17 +94,17 @@ section {
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
 }
 
 input,
 textarea,
 select {
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 0.95rem;
-    transition: 0.3s ease;
+    font-size: 1rem;
+    transition: 0.3s;
 }
 
 input:focus,
@@ -71,19 +117,19 @@ select:focus {
 
 textarea {
     resize: none;
-    min-height: 80px;
+    min-height: 90px;
 }
 
-/* BOTON PUBLICAR */
+/* BOTÓN GENERAL */
 button {
     background: #667eea;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -91,53 +137,68 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* CONTENEDOR DE TARJETAS */
+/* FILTROS */
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filters button {
+    background: #eee;
+    color: #333;
+}
+
+.filters button:hover {
+    background: #ddd;
+}
+
+/* LISTA DE SKILLS */
 #skillsList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    gap: 20px;
 }
 
-/* TARJETA DE HABILIDAD (esto lo usará script.js) */
+/* TARJETAS */
 .skill-card {
     background: #f8f9ff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     border-left: 5px solid #667eea;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .skill-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .skill-card h3 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .skill-card p {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
     color: #555;
 }
 
 .skill-card small {
-    font-size: 0.8rem;
     color: #888;
 }
 
-/* BOTONES DENTRO DE TARJETA */
+/* BOTONES EN TARJETAS */
 .card-buttons {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
     gap: 8px;
 }
 
 .card-buttons button {
     flex: 1;
-    padding: 6px;
-    font-size: 0.85rem;
+    padding: 8px;
+    font-size: 0.9rem;
 }
 
 .edit-btn {
@@ -156,13 +217,27 @@ button:hover {
     background: #c53030;
 }
 
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 40px;
+}
+
 /* RESPONSIVE */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
     }
 
     section {
-        padding: 15px;
+        width: 95%;
+        padding: 20px;
     }
 }
