@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SkillSwap</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<<<<<<< HEAD
+
+    <header>
+        <h1>SkillSwap</h1>
+        <p>Intercambia habilidades con otras personas</p>
+    </header>
+
+    <section class="form-section">
+        <h2>Publicar Habilidad</h2>
+        <form id="skillForm">
+            <input type="text" id="title" placeholder="Título" required>
+            
+            <textarea id="description" placeholder="Descripción" required></textarea>
+
+            <select id="category" required>
+                <option value="">Selecciona categoría</option>
+                <option value="Programación">Programación</option>
+                <option value="Idiomas">Idiomas</option>
+                <option value="Diseño">Diseño</option>
+                <option value="Música">Música</option>
+                <option value="Otros">Otros</option>
+            </select>
+
+            <select id="type" required>
+                <option value="">Tipo</option>
+                <option value="Ofrezco">Ofrezco</option>
+                <option value="Busco">Busco</option>
+            </select>
+
+            <button type="submit">Publicar</button>
+        </form>
+    </section>
+
+    <section class="skills-section">
+        <h2>Publicaciones</h2>
+        <div id="skillsList"></div>
+    </section>
+
+    <script src="script.js"></script>
+=======
     <h1>hola</h1>
     <div>
         <table>
@@ -16,5 +56,6 @@
             </tr>
         </table>
     </div>
+>>>>>>> b9e47f5fe153b22983a058a2d6673ca58e4a9513
 </body>
 </html>
