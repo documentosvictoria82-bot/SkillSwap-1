@@ -17,7 +17,7 @@
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <header class="hero">
         <h1>Intercambia habilidades con personas reales</h1>
         <p>Enseña lo que sabes. Aprende lo que necesitas.</p>
@@ -29,9 +29,19 @@
         <h2>Publicar una habilidad</h2>
 
         <form id="skillForm">
-            <input type="text" id="title" placeholder="Título (Ej: Enseño JavaScript)" required>
 
-            <textarea id="description" placeholder="Describe tu habilidad o lo que estás buscando" required></textarea>
+            <input 
+                type="text" 
+                id="title" 
+                placeholder="Título (Ej: Enseño JavaScript)" 
+                required
+            >
+
+            <textarea 
+                id="description" 
+                placeholder="Describe tu habilidad o lo que estás buscando"
+                required
+            ></textarea>
 
             <select id="category" required>
                 <option value="">Selecciona categoría</option>
@@ -50,16 +60,18 @@
             </select>
 
             <button type="submit">Publicar</button>
+
         </form>
     </section>
 
     <!-- FILTROS -->
     <section class="filter-section">
         <h2>Explorar habilidades</h2>
+
         <div class="filters">
-            <button onclick="filterSkills('all')">Todas</button>
-            <button onclick="filterSkills('Ofrezco')">Ofrezco</button>
-            <button onclick="filterSkills('Busco')">Busco</button>
+            <button type="button" onclick="filterSkills('all')">Todas</button>
+            <button type="button" onclick="filterSkills('Ofrezco')">Ofrezco</button>
+            <button type="button" onclick="filterSkills('Busco')">Busco</button>
         </div>
     </section>
 
@@ -73,6 +85,8 @@
         <p>© 2026 SkillSwap - Proyecto académico</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- SCRIPT -->
+    <script src="../Back-end/backend.js"></script>
+
 </body>
 </html>

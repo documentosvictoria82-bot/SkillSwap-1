@@ -1,5 +1,6 @@
 // URL base del backend
-const API_URL = "http://localhost:3000/skills";
+
+const API_URL = "/skills";
 
 const skillForm = document.getElementById("skillForm");
 const skillsList = document.getElementById("skillsList");

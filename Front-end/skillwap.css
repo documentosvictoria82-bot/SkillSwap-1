@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET GENERAL
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,21 +10,25 @@
 
 body {
     background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
     color: #333;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.25);
     color: white;
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .navbar ul {
@@ -42,7 +48,9 @@ body {
     opacity: 0.7;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -50,7 +58,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin-bottom: 15px;
 }
 
@@ -60,10 +68,11 @@ body {
 }
 
 .hero-btn {
+    display: inline-block;
     background: white;
     color: #667eea;
-    padding: 12px 25px;
-    border-radius: 25px;
+    padding: 12px 28px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -74,13 +83,15 @@ body {
     transform: translateY(-3px);
 }
 
-/* SECCIONES */
+/* =========================
+   SECCIONES GENERALES
+========================= */
 section {
     background: white;
-    margin: 30px auto;
-    padding: 30px;
     width: 90%;
     max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -90,7 +101,9 @@ section h2 {
     color: #444;
 }
 
-/* FORMULARIO */
+/* =========================
+   FORMULARIO
+========================= */
 form {
     display: flex;
     flex-direction: column;
@@ -112,7 +125,7 @@ textarea:focus,
 select:focus {
     outline: none;
     border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 0 6px rgba(102, 126, 234, 0.4);
 }
 
 textarea {
@@ -120,7 +133,7 @@ textarea {
     min-height: 90px;
 }
 
-/* BOTÓN GENERAL */
+/* BOTÓN PRINCIPAL */
 button {
     background: #667eea;
     color: white;
@@ -137,7 +150,9 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* FILTROS */
+/* =========================
+   FILTROS
+========================= */
 .filters {
     display: flex;
     gap: 10px;
@@ -147,35 +162,41 @@ button:hover {
 .filters button {
     background: #eee;
     color: #333;
+    font-weight: bold;
 }
 
 .filters button:hover {
     background: #ddd;
 }
 
-/* LISTA DE SKILLS */
+/* =========================
+   LISTA DE HABILIDADES
+========================= */
 #skillsList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* TARJETAS */
+/* =========================
+   TARJETAS
+========================= */
 .skill-card {
     background: #f8f9ff;
     padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid #667eea;
+    border-radius: 12px;
+    border-left: 6px solid #667eea;
     transition: 0.3s;
 }
 
 .skill-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .skill-card h3 {
     margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .skill-card p {
@@ -185,10 +206,13 @@ button:hover {
 }
 
 .skill-card small {
+    font-size: 0.85rem;
     color: #888;
 }
 
-/* BOTONES EN TARJETAS */
+/* =========================
+   BOTONES DENTRO DE TARJETA
+========================= */
 .card-buttons {
     margin-top: 12px;
     display: flex;
@@ -201,6 +225,7 @@ button:hover {
     font-size: 0.9rem;
 }
 
+/* BOTÓN EDITAR */
 .edit-btn {
     background: #38b2ac;
 }
@@ -209,6 +234,7 @@ button:hover {
     background: #319795;
 }
 
+/* BOTÓN ELIMINAR */
 .delete-btn {
     background: #e53e3e;
 }
@@ -217,15 +243,20 @@ button:hover {
     background: #c53030;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 20px;
     color: white;
     margin-top: 40px;
+    font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
